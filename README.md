@@ -2,6 +2,7 @@
 
 bert_model file [creation](https://github.com/gp201/BERT/tree/master/BERT_Custom)
 
+Unzip the bert_model.zip file in the same folder the repository content is placed in.     
 Run the restore_bert_model.py file
 
 ## Input:
