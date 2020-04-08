@@ -28,3 +28,15 @@ def f1_per_token(true_labels, predictions):
     return classification_report(predictions,
                             true_labels, 
                             labels=labels)
+                           
+def f1_per_token_plot(true_labels, predictions):
+    true_labels = list(itertools.chain(*true_labels))
+    predictions = list(itertools.chain(*predictions))
+    
+    labels = list(set(true_labels) - {'[PAD]', 'O'})
+    
+    return classification_report(predictions,
+                            true_labels, 
+                            labels=labels,
+                            output_dict=True)
+                            
